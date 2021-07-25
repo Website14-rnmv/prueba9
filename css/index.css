@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+:root{
+    --var-morado: #4E15BC;
+    --var-azul: #2172FF;
+    --var-amarillo: #FDB900;
+    --var-amarilloOscuro: #ee722a;
+    --var-verde: #00B945;
+    --var-negroClaro: rgb(15, 15, 15);
+    
+}
+
+main{
+    width: 100%;
+    padding:  3% 0 3% 0%;
+}
+
+.title-plataforma{
+    width: 100%;
+    padding: 6% 10% 5% 10%;
+   background-color: var(--var-morado);
+   text-align: center;
+}
+.title-plataforma h1{
+    color: white;
+}
+.title-plataforma p{
+    color: white;
+}
+.widgets{
+    width: 100%;
+    padding: 5% 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.wid-isos{
+    width: 100%;
+    border-radius: 10px;
+    
+    text-decoration: none;
+    border: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.imagen-wid{
+    width: 100%;
+    height: 280px;
+    
+}
+.imagen-wid img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    
+
+}
+.text-wid{
+    width: 80%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: var(--var-verde);
+    position: absolute;
+    transition: .5s;
+    bottom: 20px;
+    padding: 20px;    
+
+}
+.iso{
+    font-size: 20px;
+    color: white;
+    z-index: 2;
+    transition: .5s;
+    font-weight: 500;
+} 
+.subiso{
+    color:white;
+    transition: .8s;
+    position: absolute;
+    opacity: 0;
+    font-weight: 500;
+}
+.blur{
+   position: absolute;
+    width: 100%;
+    height: 30px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: rgb(73,0,209);
+background: linear-gradient(90deg, rgba(73, 0, 209, 0.212) 0%, rgba(93, 49, 224, 0.267) 100%);
+    padding: 30px;
+    border-radius: 10px;
+
+}
+.wid-isos:hover .subiso{
+    opacity: 100%;
+    transition: .5s;
+    
+}
+.wid-isos:hover .iso{
+    opacity: 0;
+    transition: .5s;
+    
+}
